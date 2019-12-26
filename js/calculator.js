@@ -25,9 +25,15 @@ class Calculator {
 		var current_assets = $('#current_assets');
 		var current_liabilities = $('#current_liabilities');
 
-		var cr = (current_assets.val()/current_liabilities.val());
+		var cr = (
+			current_assets.val() / current_liabilities.val()
+		);
 		
-		this.current_ratio = (current_assets.val()/current_liabilities.val());
+		this.current_ratio = (
+			current_assets.val() / current_liabilities.val()
+		);
+
+		return this;
 	}
 
 	getQuickRatio() {
@@ -41,7 +47,13 @@ class Calculator {
 		var total_current_stock = $('#stock_or_inventory');
 		var current_liabilities = $('#current_liabilities');
 
-		this.quick_ratio = ((total_current_assets.val()-total_current_stock.val())/current_liabilities.val());
+		this.quick_ratio = (
+			(
+				total_current_assets.val() - total_current_stock.val()
+			) / current_liabilities.val()
+		);
+
+		return this;
 	}
 
 	getLeverageRatio() {
@@ -54,7 +66,11 @@ class Calculator {
 		var current_liabilities = $('#current_liabilities');
 		var total_equity = $('#share_capital');
 
-		this.leverage_ratio = (current_liabilities.val()/total_equity.val());
+		this.leverage_ratio = (
+			current_liabilities.val() / total_equity.val()
+		);
+
+		return this;
 	}
 
 	getDebtToAssetsRatio() {
@@ -67,7 +83,11 @@ class Calculator {
 		var current_liabilities = $('#current_liabilities');
 		var total_current_assets = $('#current_assets');
 
-		this.debt_to_assets_ratio = (current_liabilities.val()/total_current_assets.val());
+		this.debt_to_assets_ratio = (
+			current_liabilities.val() / total_current_assets.val()
+		);
+
+		return this;
 	}
 
 	getGrossProfitMargin() {
@@ -80,7 +100,11 @@ class Calculator {
 		var gross_profit = $('#gross_profit');
 		var sales = $('#sales');
 
-		this.gross_profit_margin = (gross_profit.val()/sales.val())*100;
+		this.gross_profit_margin = (
+			gross_profit.val() / sales.val()
+		) * 100;
+
+		return this;
 	}
 
 	getNetProfitMargin() {
@@ -93,7 +117,11 @@ class Calculator {
 		var net_profit_before_tax = $('#net_profit_before_tax');
 		var sales = $('#sales');
 
-		this.net_profit_margin = (net_profit_before_tax.val()/sales.val()) * 100;
+		this.net_profit_margin = (
+			net_profit_before_tax.val() / sales.val()
+		) * 100;
+
+		return this;
 	}
 
 	getDayStock() {
@@ -106,7 +134,11 @@ class Calculator {
 		var stock_or_inventory = $('#stock_or_inventory');
 		var cost_of_goods_sold = $('#cost_of_goods_sold');
 		
-		this.days_stock = (stock_or_inventory.val()/cost_of_goods_sold.val()) * 365;
+		this.days_stock = (
+			stock_or_inventory.val() / cost_of_goods_sold.val()
+		) * 365;
+
+		return this;
 	}
 
 	getDayTradeDebtors() {
@@ -119,7 +151,11 @@ class Calculator {
 		var trade_debtors = $('#trade_debtors');
 		var sales = $('#sales');
 
-		this.days_trade_debtors = (trade_debtors.val()/sales.val()) * 365;
+		this.days_trade_debtors = (
+			trade_debtors.val() / sales.val()
+		) * 365;
+
+		return this;
 	}
 
 	getDayTradeCreditor() {
@@ -132,7 +168,11 @@ class Calculator {
 		var trade_creditors = $('#trade_creditors');	
 		var purchases = $('#purchases');
 
-		this.days_trade_creditor = (trade_creditors.val()/purchases.val()) * 365;
+		this.days_trade_creditor = (
+			trade_creditors.val() / purchases.val()
+		) * 365;
+
+		return this;
 	}
 
 	getReturnOnAssets() {
@@ -145,7 +185,11 @@ class Calculator {
 		var net_profit_before_tax = $('#net_profit_before_tax');
 		var current_assets = $('#current_assets');
 
-		this.return_on_assets = (net_profit_before_tax.val()/current_assets.val()) * 100
+		this.return_on_assets = (
+			net_profit_before_tax.val() / current_assets.val()
+		) * 100;
+
+		return this;
 	}
 
 	getReturnOnEquity() {
@@ -158,7 +202,11 @@ class Calculator {
 		var net_profit_before_tax = $('#net_profit_before_tax');
 		var total_equity = $('#share_capital');
 
-		this.return_on_equity = (net_profit_before_tax.val()/total_equity.val()) * 100;	
+		this.return_on_equity = (
+			net_profit_before_tax.val() / total_equity.val()
+		) * 100;	
+
+		return this;
 	}
 
 	calculate(callback=null) {
